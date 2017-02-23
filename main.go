@@ -12,10 +12,6 @@ const port = ":3000"
 func main() {
 	e := echo.New()
 
-	e.Use(middleware.StaticWithConfig(middleware.StaticConfig{
-		Root: "client/dev",
-	}))
-
 	e.Use(middleware.Static(""))
 	e.Use(middleware.Static("client/dev"))
 
